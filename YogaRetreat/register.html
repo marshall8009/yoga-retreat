@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yoga Retreat</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="yogastyles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body data-spy="scroll" data-target="#navbar-collapse">
+    <header class="primary-header container group">
+    		<div class="container-fluid">
+    		<div class="row">
+    			<div class="col-md-4 header-grid">
+    				<h2 class="date-header">22<sup>nd</sup> &ndash; 25<sup>th</sup> June</h2>
+    			</div>
+    		
+            	<div class="col-md-4 header-grid">
+            	    <h1 class="logo">
+            	        <a href="index.html">Yoga <br />Retreat</a>
+            	    </h1>
+           		</div>
+            	<div class="col-md-4 header-grid">
+            		<h2 class="location">Govinda Retreat <br>Otford, NSW</h2>
+            	</div>
+            	</div>
+            </div>
+        </header>
+       
+        <nav role="navigation" class="navbar navbar-custom">
+        	<div class="container-fluid">
+        		<div class="navbar-header">
+        			<button type="button" class="navbar-toggle" data-target="#navbarCollapse" data-toggle="collapse">
+                		<span class="sr-only">Toggle navigation</span>
+                		<span class="icon-bar"></span>
+                		<span class="icon-bar"></span>
+                		<span class="icon-bar"></span>
+            		</button>
+        		</div>
+        		<div class="navbar-collapse collapse" id="navbarCollapse">
+        			<ul class="nav navbar-nav">
+        				<li><a href="index.html">Home</a></li>
+        				<li><a href="teachers.html">Teachers</a></li>
+        				<li><a href="schedule.html">Schedule</a></li>
+        				<li><a href="venue.html">Venue</a></li>
+        				<li><a href="register.html">Register</a></li>
+        			</ul>
+        		</div>
+        	</div>
+        </nav>
+        <section class="container-fluid teacher-header">
+            <div >
+            <h1>Register</h1>
+            <p>Register today for only $XXX! This package is all inclusive so you don't have to worry about the logistics.</p>
+            </div>
+        </section>
+        <div class="container-fluid register">
+        <div id="register-info">
+        	<h2>Secure your spot now</h2>
+        	<br>
+        	<h5>$XXX per person</h5>
+        	<br>
+        	<p>Sign up for our amazing three day retreat now by clicking the register button. Once you are registered we will follow up with a receipt of purchase and see you soon!</p>
+        	<br>
+        	<h4>Why Attend?</h4>
+        	<br>
+        	<ul class="why-attend">
+        		<li>Two world class instructors</li>
+        		<li>One full day of workouts and two full days of yoga meditation</li>
+        		<li>Hosted at the beautiful Govinda Retreat</li>
+        		<li>Life changing experience</li>
+        	</ul>
+        	
+        	</div>
+        	<div class="form-fillout" id="form-fillout">
+        		<form>
+        		<div class="fieldset1">
+        			<fieldset>
+        				<label class="form-label">First Name:<span class="asterisk">*</span></label>
+        				<input type="text" name="name" placeholder="First Name" required class="form-input" id="firstName" onBlur="nameValid(document.getElementById('firstName'), 'Please enter a name')"><br>
+        				
+       				  <label class="form-label">Last Name:<span class="asterisk">*</span></label>
+        				<input class="form-input" type="text" name="name" placeholder="Last Name" required id="lastName" onBlur="nameValid(document.getElementById('lastName'), 'Please enter a name')"><br>
+        				
+       				  <label class="form-label">Date of Birth:<span class="asterisk">*</span></label>
+        				<input class="form-input" type="date" name="date" placeholder="dd/mm/yyyy" required id="dob" onblur="validateDate(document.getElementById('dob'), 'Invalid date')"><br>
+        				
+       				  <label class="form-label">Gender:<span class="asterisk">*</span></label>
+        				Male: <input class="form-input gender" list="gender" value="Male" type="radio" name="Gender" id="male" onblur="gender('Please select your gender')">
+        				Female: <input class="form-input gender" list="gender" value="Female" type="radio" name="Gender" onblur="gender('Please select your gender')">
+        				<span id="genderSpan"></span><br>
+        					
+       				  <label class="form-label">Email:<span class="asterisk">*</span></label>
+        				<input class="form-input" type="email" name="email" placeholder="Email" required id="email" onblur="emailValid(document.getElementById('email'), 'Email not valid')"><br>
+					
+					</fieldset>
+     				</div>
+       				<div class="fieldset2">
+       				<fieldset>
+        				<label class="form-label" for="Street Addres">Street Address:</label>
+						<input class="form-input" type="text" id="streetAddress" onBlur="Address(document.getElementById('streetAddress'), 'Please enter an address')"><br>
+						
+						<label class="form-label" for="Suburb">Suburb:</label>
+						<input class="form-input" type="text" id="suburb" onBlur="Suburb(document.getElementById('suburb'), 'Please enter a suburb')"><br>
+						
+						<label class="form-label" for="state">State:</label>
+						<input class="form-input" list="state" id="State" onBlur="stateValid(document.getElementById('State'), 'Please select a state')">
+							<datalist id="state">
+								<option value="NSW"></option>
+								<option value="NT"></option>
+								<option value="QLD"></option>
+								<option value="SA"></option>
+								<option value="TAS"></option>
+								<option value="VIC"></option>
+								<option value="WA"></option>
+							</datalist><br>
+							
+						<label class="form-label" for="country">Country:</label>
+						<input class="form-input" id="country" type="text" value="Australia" readonly disabled="disabled"><br>
+						
+						<label class="form-label" for="postcode">Postcode:</label>
+						<input class="form-input" type="text" id="postcode" onBlur="Postcode(document.getElementById('postcode'), 'Please enter a postcode')"><br>     					
+        			</fieldset>
+        			</div>
+        			<div class="add-button">
+        				<button type="button" id="next" onClick="Next()">Next</button>
+        			</div>
+        		</form>
+        	</div>
+        	<a><button type="button" class="btn-read-more" onClick="registerButton()">Register</button></a>
+        </div>
+        
+        
+        <footer class="primary-footer">
+        <small>&copy; <span class="seperator">|</span> Liv Yoga</small>
+        <div class="icon-container">
+        	<div class="btn-group btn-group-large"><a href="#"><i class="fa fa-facebook-official fa-2x icons"></i></a></div>
+        	<div class="btn-group btn-group-large"><a href="#"><i class="fa fa-instagram fa-2x icons"></i></a></div>
+        	<div class="btn-group btn-group-large"><a href="#"><i class="fa fa-linkedin-square fa-2x icons"></i></a></div>
+        	<div class="btn-group btn-group-large"><a href="#"><i class="fa fa-envelope fa-2x icons"></i></a></div>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="yogajavascript.js"></script>
+    <script src="yogaJquery.js"></script>
+</body>
+</html>
